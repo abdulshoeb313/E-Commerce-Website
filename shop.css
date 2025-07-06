@@ -1,0 +1,46 @@
+.shop-container {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.sidebar {
+    width: 250px;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+#shop-products img {
+    /* flex: 1; */
+    height: 350px;
+    width: 350px;
+    display: inline;
+    gap: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+    object-position: 4%;
+}
+/* Card hover effect */
+#shop-products img:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+input[type="text"] {
+    padding: 0.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.card{
+    margin-right: 4rem;
+    
+    
+}

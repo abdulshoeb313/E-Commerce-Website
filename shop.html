@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopEasy - Shop</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Custom CSS -->
+   <link rel="stylesheet" href="shop.css">
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow sticky-top position-relative">
+  <div class="container-fluid px-4">
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold me-3" href="index.html">
+      <i class="fas fa-shopping-cart me-2"></i>ShopEasy
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Search box centered -->
+    <form class="d-flex navbar-center">
+      <input class="form-control" type="search" placeholder="Search products..." aria-label="Search">
+      <button class="btn btn-warning " type="submit">
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <!-- Left Links -->
+      <ul class="navbar-nav me-3 mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
+
+      <!-- Cart button -->
+      <ul class="navbar-nav ms-3">
+        <li class="nav-item position-relative">
+          <a class="nav-link" href="cart.html">
+            <i class="fas fa-shopping-cart fa-lg"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              0
+            </span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Main Shop Section -->
+<div class="container py-5">
+  <div class="row">
+
+    <!-- Sidebar Filters -->
+   <aside class="col-lg-3 mb-4">
+  <div class="card shadow-sm p-4 d-block justify-content-between align-items-center">
+    <h5 class="fw-bold mb-4">Search Products</h5>
+    <input type="text" id="searchInput" class="form-control mb-4" placeholder="Search products...">
+
+    <h5 class="fw-bold mb-3">Filter by Category</h5>
+
+    <div class="form-check">
+      <input class="form-check-input category-filter" type="checkbox" value="Electronics" id="electronics">
+      <label class="form-check-label" for="electronics">Electronics</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input category-filter" type="checkbox" value="Fashion" id="fashion">
+      <label class="form-check-label" for="fashion">Fashion</label>
+    </div>
+
+    <!--  for price -->
+
+
+    <div class="form-check">
+      <input class="form-check-input category-filter" type="checkbox" value="Home Decor" id="homedecor">
+      <label class="form-check-label" for="homedecor">Home Decor</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input category-filter" type="checkbox" value="Books" id="books">
+      <label class="form-check-label" for="books">Books</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input category-filter" type="checkbox" value="Mobile Phones" id="mobiles">
+      <label class="form-check-label" for="mobiles">Mobile Phones</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input category-filter" type="checkbox" value="Laptops" id="laptops">
+      <label class="form-check-label" for="laptops">Laptops</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input category-filter" type="checkbox" value="Gaming" id="gaming">
+      <label class="form-check-label" for="gaming">Gaming</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input category-filter" type="checkbox" value="Groceries" id="groceries">
+      <label class="form-check-label" for="groceries">Groceries</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input category-filter" type="checkbox" value="Beauty" id="beauty">
+      <label class="form-check-label" for="beauty">Beauty</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input category-filter" type="checkbox" value="Footwear" id="footwear">
+      <label class="form-check-label" for="footwear">Footwear</label>
+    </div>
+
+  </div>
+</aside>
+
+
+    <!-- Products Grid -->
+    <main class="col-lg-9">
+      <h2 class="fw-bold mb-4">All Products</h2>
+
+      <div class="container">
+      <div class="row g-4" id="shop-products">
+        <!-- Products loaded dynamically here -->
+      </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+        <!-- Products loaded dynamically -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3 mb-3">
+        <h5 class="fw-bold mb-3">ShopEasy</h5>
+        <p>Your one-stop online store for top quality products, best prices & fast delivery.</p>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h5 class="fw-bold mb-3">Get to Know Us</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Careers</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Press Releases</a></li>
+          <li><a href="#" class="text-white text-decoration-none">ShopEasy Cares</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h5 class="fw-bold mb-3">Customer Service</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Your Account</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Returns</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Shipping Rates</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Help</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h5 class="fw-bold mb-3">Connect With Us</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none"><i class="fab fa-facebook me-2"></i> Facebook</a></li>
+          <li><a href="#" class="text-white text-decoration-none"><i class="fab fa-twitter me-2"></i> Twitter</a></li>
+          <li><a href="#" class="text-white text-decoration-none"><i class="fab fa-instagram me-2"></i> Instagram</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary">
+    <p class="text-center mb-0">&copy; 2025 ShopEasy. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+<script src="shop.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

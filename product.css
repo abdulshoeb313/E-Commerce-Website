@@ -1,0 +1,33 @@
+.product-detail-container {
+    display: flex;
+    gap: 2rem;
+    padding: 3rem;
+    flex-wrap: wrap;
+}
+
+.product-image img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.product-info {
+    max-width: 500px;
+}
+
+.product-info p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+input[type="number"] {
+    padding: 0.5rem;
+    width: 70px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#productRating i {
+    color: #FFD700;
+    font-size: 1.2rem;
+}
